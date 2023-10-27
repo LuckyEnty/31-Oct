@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+}
+
+/*Wave*/
+body{
+    margin: 0;
+    background-color: antiquewhite;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+h2{
+    font-size: 15vmin;
+    position: absolute;
+    z-index: 100;
+}
+.border{ 
+    color: white;  
+    text-shadow:
+       -1px -1px 0 black, 
+       1px -1px 0 black,
+       -1px 1px 0 black,
+       1px 1px 0 black;
+}
+.wave{
+    color: black;/*Color de en medi0*/
+    animation: shift 5s ease-in-out infinite;
+}
+
+@keyframes shift {
+    0%, 100% {
+        clip-path: polygon(0% 47%, 10% 48%, 33% 54%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
+    }
+    50% {
+        clip-path: polygon(0% 60%, 15% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
+    }
+}
+
+
+/*Burbujas*/
+.burbuja div{
+    width: 80px;
+    height: 80px;
+    background-color: black;
+    border-radius: 100%;
+    
+    position: absolute;
+    bottom: 0; 
+    animation: animar 4s linear infinite;
+    z-index: 10;
+    
+}
+
+.burbuja div:nth-child(1){
+    width: 40px;
+    height: 40px;
+    right: 20%;
+    animation-duration: 6s;
+}
+
+.burbuja div:nth-child(2){
+    width: 50px;
+    height: 50px;
+    right: 15%;
+    animation-duration: 5s;
+}
+
+.burbuja div:nth-child(3){
+    width: 30px;
+    height: 30px;
+    right: 5%;
+    animation-duration: 8s;
+}
+
+.burbuja div:nth-child(4){
+    width: 80px;
+    height: 80px;
+    left: 42%;
+    animation-duration: 5.3s;
+}
+
+.burbuja div:nth-child(5){
+    width: 60px;
+    height: 60px;
+    right: 70%;
+    animation-duration: 6.5s;
+}
+
+.burbuja div:nth-child(6){
+    width: 100px;
+    height: 100px;
+    left: 35%;
+    animation-duration: 8.5s;
+}
+
+.burbuja div:nth-child(7){
+    width: 120px;
+    height: 120px;
+    left: 56%;
+    animation-duration: 4.5s;
+}
+.burbuja div:nth-child(8){
+    width: 110px;
+    height: 110px;
+    right: 90%;
+    animation-duration: 9s;
+}
+
+.burbuja div:nth-child(9){
+    width: 130px;
+    height: 130px;
+    left: 85%;
+    animation-duration: 10s;
+}
+
+@keyframes animar{
+    0%{
+        width: 0%;
+        height: 0%;
+        opacity: 0.8;
+    }
+    5%{
+        width: 40px;
+        height: 40px;
+    }
+    100%{
+        bottom: 100vh;
+    }
+    
+}
+.color{
+    position: relative; z-index: 110;; margin-top: 20%; opacity: 0.3;
+}
+.color:hover{
+    opacity: 1;
+}
